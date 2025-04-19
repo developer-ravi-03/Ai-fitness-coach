@@ -16,14 +16,14 @@ export default defineSchema({
       schedule:v.array(v.string()),
       exercises:v.array(v.object({
         day:v.string(),
-        routines:v.object({
+        routines:v.array(v.object({
           name:v.string(),
           sets:v.optional(v.number()),
           reps:v.optional(v.number()),
           duration:v.optional(v.string()),
           description:v.optional(v.string()),
           exercises: v.optional(v.array(v.string())),
-        }),        
+        })),        
       })),
     }),
 
