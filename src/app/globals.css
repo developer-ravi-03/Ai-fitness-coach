@@ -200,7 +200,7 @@
 }
 
 .animate-scanline {
-  animation: scanline 8s linear infinite;
+  animation: scanline 20s linear infinite;
 }
 
 .animate-slow-spin {
