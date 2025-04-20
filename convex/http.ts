@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { httpRouter} from "convex/server";
 import {WebhookEvent} from "@clerk/nextjs/server"
 import {Webhook}  from "svix"
