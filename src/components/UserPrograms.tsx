@@ -79,7 +79,7 @@ const UserPrograms = () => {
             </motion.p>
 
             {/* STATS */}
-            <div className="flex items-center justify-center gap-12 mt-10 font-mono">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-12 mt-10 font-mono">
               <motion.div
                 className="flex flex-col items-center"
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -91,12 +91,15 @@ const UserPrograms = () => {
                   PROGRAMS
                 </p>
               </motion.div>
+
+              {/* Divider */}
               <motion.div
-                className="w-px h-12 bg-border"
+                className="w-12 h-px md:w-px md:h-12 bg-border"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               ></motion.div>
+
               <motion.div
                 className="flex flex-col items-center"
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -108,12 +111,15 @@ const UserPrograms = () => {
                   CREATION TIME
                 </p>
               </motion.div>
+
+              {/* Divider */}
               <motion.div
-                className="w-px h-12 bg-border"
+                className="w-12 h-px md:w-px md:h-12 bg-border"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               ></motion.div>
+
               <motion.div
                 className="flex flex-col items-center"
                 initial={{ opacity: 0, scale: 0.5 }}
