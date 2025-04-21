@@ -23,6 +23,30 @@ const GeneratePage = () => {
 
   const messageContainerRef = useRef<HTMLDivElement>(null);
 
+  // SOLUTION to get rid of "Meeting has ended" error
+  useEffect(() => {
+    const originalError = console.error;
+    // override console.error to ignore "Meeting has ended" errors
+    console.error = function (msg, ...args) {
+      if (
+        msg &&
+        (msg.includes("Meeting has ended") ||
+          (args[0] && args[0].toString().includes("Meeting has ended")))
+      ) {
+        console.log("Ignoring known error: Meeting has ended");
+        return; // don't pass to original handler
+      }
+
+      // pass all other errors to the original handler
+      return originalError.call(console, msg, ...args);
+    };
+
+    // restore original handler on unmount
+    return () => {
+      console.error = originalError;
+    };
+  }, []);
+
   //auto scroll messages
   useEffect(() => {
     if (messageContainerRef.current) {
@@ -46,7 +70,7 @@ const GeneratePage = () => {
   useEffect(() => {
     // Function to handle call start event
     const handleCallStart = () => {
-      console.log("Call started");
+      // console.log("Call started");
       setConnecting(false);
       setCallActive(true);
       setCallEnded(false);
@@ -54,7 +78,7 @@ const GeneratePage = () => {
 
     // Function to handle call end event
     const handleCallend = () => {
-      console.log("Call ended");
+      // console.log("Call ended");
       setCallActive(false);
       setConnecting(false);
       setIsSpeaking(false);
@@ -63,15 +87,13 @@ const GeneratePage = () => {
 
     // Function to handle speech start event
     const handleSpeechStart = () => {
-      console.log("Ai Speech started");
+      // console.log("Ai Speech started");
       setIsSpeaking(true);
     };
-    const workflowId = process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID;
-    console.log("Workflow ID", workflowId);
 
     // Function to handle speech end event
     const handleSpeechEnd = () => {
-      console.log("Ai Speech ended");
+      // console.log("Ai Speech ended");
       setIsSpeaking(false);
     };
     // Function to handle message event
