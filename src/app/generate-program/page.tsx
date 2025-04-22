@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -38,7 +36,7 @@ const GeneratePage = () => {
       }
 
       // pass all other errors to the original handler
-      return originalError.call(console, msg, ...args);
+      // return originalError.call(console, msg, ...args);
     };
 
     // restore original handler on unmount

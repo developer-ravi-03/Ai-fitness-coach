@@ -96,7 +96,7 @@ const HomePage = () => {
                 ref={ref}
                 initial={{ x: -100, opacity: 0 }}
                 animate={controls}
-                className="flex items-center gap-5 md:gap-12 py-6 font-mono"
+                className="flex items-center gap-3 md:gap-12 py-6 font-mono"
               >
                 <div className="flex flex-col">
                   <div className="text-2xl text-primary">{users}+</div>
