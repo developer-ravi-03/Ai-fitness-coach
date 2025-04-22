@@ -31,11 +31,11 @@
 -->now we need a node modules like (svix) for send our information that are registered on clerk that can be send through svix to the convex database to store the user
 -->npm install svix // for install node modules
 -->After that create http.ts in convex folder for send data to clerk from convex
---> i have to go on clerk and create webhooks endpoint from convex url(https://spotted-salmon-64.convex.cloud)
---> change it to like(https://spotted-salmon-64.convex.site/clerk-webhooks) webhooks
+--> i have to go on clerk and create webhooks endpoint from convex url(https://spotted-saon-64.convex.cloud)
+--> change it to like(https://spotted-smon-64.convex.site/clerk-webhooks) webhooks
 --> now choose event like created at and updated at
 --> now copy signin secret from clerk and paste it on convex environment variables and save it
---> CLERK_WEBHOOK_SECRET : whsec_anxIIIYojzXUgc95MxxZKO7sB6ARotO7
+--> CLERK_WEBHOOK_SECRET : whsec_anxIIIYojzc95MxxZKO7sB6ARotO7
 --> create http.ts file and use above web hook in this --> here http route setup for clerk
 --> now create users.ts 
 
@@ -47,7 +47,7 @@
 --> create good ui for create program
 
 #. step -10 edit vapi workflow  for api request
--->https://spotted-salmon-64.convex.site/vapi/generate-program convex api link like this
+-->https://spotted-salmn-64.convex.site/vapi/generate-program convex api link like this
 -->create body with all values that can be sent to database of convex
 
 #. step-11
