@@ -1,0 +1,87 @@
+//This email can be used for all this setup
+-->on.developerravi@gmail.com  
+
+#. Step-1
+-->shade cn for good ui
+
+#. Step-2
+--> clerk for login logout handling
+
+#. Step-3
+--> vapi for ai agent
+-->now setup vapi  web call quick start
+-->create work flow for ai agent talk with customer
+
+#. Step-4
+--> convex for backend for AI apps
+--> npm install convex
+--> npx convex dev  // for creating env file and deploymentdatabase
+
+#. Step-5 to connect clerk with convex go through documentation of it
+-->create template in clerk and copy dev link
+--> create file in convex folder with name auth.config.ts 
+-->after that create provider folder and create convexprovider
+--> after that update layout with provider
+
+#. Step-6 setting database
+-->now we need to create schema for database
+--> after completed schema 
+
+#. Step-7 setting webhooks
+-->now we need a node modules like (svix) for send our information that are registered on clerk that can be send through svix to the convex database to store the user
+-->npm install svix // for install node modules
+-->After that create http.ts in convex folder for send data to clerk from convex
+--> i have to go on clerk and create webhooks endpoint from convex url(https://spotted-salmon-64.convex.cloud)
+--> change it to like(https://spotted-salmon-64.convex.site/clerk-webhooks) webhooks
+--> now choose event like created at and updated at
+--> now copy signin secret from clerk and paste it on convex environment variables and save it
+--> CLERK_WEBHOOK_SECRET : whsec_anxIIIYojzXUgc95MxxZKO7sB6ARotO7
+--> create http.ts file and use above web hook in this --> here http route setup for clerk
+--> now create users.ts 
+
+#.step-8 
+--> home page created and designed
+
+#. Step -9 generate-program-->page.tsx
+--> now edit program page for setting up for program and function like use state etc
+--> create good ui for create program
+
+#. step -10 edit vapi workflow  for api request
+-->https://spotted-salmon-64.convex.site/vapi/generate-program convex api link like this
+-->create body with all values that can be sent to database of convex
+
+#. step-11
+--> now create http route for vapi --> here http route setup for vapi
+
+#. step-12
+--> setup for gemini ai and create api key
+-->set that api key to the convex databse environment variables
+-->GEMINI_API_KEY is in convex
+
+
+#. step-13
+--> set up for generative ai - install google generative ai
+-->  npm i @google/generative-ai
+
+#. Step-14
+--> now fetch plan of user in plans.ts file
+--> create profileHeader under components
+
+#. step14
+-->create no fitness plan, profileheader, corner element in conponents
+-->now download tabs component from shadcn -->npx shadcn@latest add tabs
+--> after that install accordian component --> npx shadcn@latest add accordion
+
+#. Step-15
+-->for ignore no props error or warning we need to add 
+-->{
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off",
+      "@next/next/no-img-element": "off",
+    },
+  },
+  in eslint.config.mjs
+
+#. Step-16 
+--> for update profile we need to update http file 
+--> create a function to update the user
