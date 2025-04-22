@@ -2,7 +2,7 @@ export const USER_PROGRAMS = [
   {
     id: 1,
     first_name: "Sanjeev",
-    profilePic: "https://randomuser.me/api/portraits/men/78.jpg",
+    profilePic: "https://randomuser.me/api/portraits/men/94.jpg",
     fitness_goal: "Weight Loss",
     height: "5'6\"",
     weight: "165 lbs",
